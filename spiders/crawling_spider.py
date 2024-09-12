@@ -14,7 +14,7 @@ class CrawlSpider(CrawlSpider):
         Rule(LinkExtractor(allow="catalogue",deny="catalogue"), callback="parse_item")
     )
 
-    # Define a function for handle scrap with specific on element tag
+    # Define a function for handle scrap with specific on element tagff
     def parse_item(self,response):
         yield {
             "title": response.css(".product_main h1::text").get(),
